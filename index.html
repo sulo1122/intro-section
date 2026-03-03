@@ -1,0 +1,109 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>intro section</title>
+
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <header class="row header">
+      <img src="images/logo.svg" />
+
+      <nav class="row nav">
+        <ul class="row nav__list">
+          <li class="hidden features row menu">
+            <div class="row menu--name">
+              Features
+              <img
+                src="images/icon-arrow-down.svg"
+                data-srcup="images/icon-arrow-up.svg"
+                data-srcdown="images/icon-arrow-down.svg"
+              />
+            </div>
+
+            <ul class="popMenu">
+              <li><img src="images/icon-todo.svg" /> Todo List</li>
+              <li><img src="images/icon-calendar.svg" /> Calendar</li>
+              <li><img src="images/icon-reminders.svg" /> Reminders</li>
+              <li><img src="images/icon-planning.svg" /> Planning</li>
+            </ul>
+          </li>
+          <li class="hidden company row menu">
+            <div class="row menu--name">
+              Company
+              <img
+                src="images/icon-arrow-down.svg"
+                data-srcup="images/icon-arrow-up.svg"
+                data-srcdown="images/icon-arrow-down.svg"
+              />
+            </div>
+            <ul class="popMenu">
+              <li>History</li>
+              <li>Our Team</li>
+              <li>Blog</li>
+            </ul>
+          </li>
+          <li>Careers</li>
+          <li>About</li>
+        </ul>
+
+        <div class="btns--row row">
+          <button class="btn btn--login">Login</button>
+          <button class="btn btn--register">Register</button>
+        </div>
+      </nav>
+      <button
+        class="btn side-menu-btn"
+        data-open="http://127.0.0.1:5500/images/icon-menu.svg"
+        data-close="http://127.0.0.1:5500/images/icon-close-menu.svg"
+      >
+        <img src="images/icon-menu.svg" />
+      </button>
+    </header>
+    <section class="section grid grid--2cols">
+      <div class="col-text grid-col">
+        <h1 class="h1">Make remote work</h1>
+        <p>
+          Get your team in sync, no matter your location. Streamline processes,
+          create team rituals, and watch productivity soar.
+        </p>
+        <button class="btn btn--learn">Learn more</button>
+
+        <div class="row brands">
+          <img src="images/client-databiz.svg" />
+          <img src="images/client-audiophile.svg" />
+          <img src="images/client-meet.svg" />
+          <img src="images/client-maker.svg" />
+        </div>
+      </div>
+      <div class="col-img grid-col">
+        <picture>
+          <source
+            srcset="images/image-hero-desktop.png"
+            media="(min-width: 47.5em)"
+          />
+          <img class="hero-img" srcset="images/image-hero-mobile.png" />
+        </picture>
+      </div>
+    </section>
+  </body>
+</html>

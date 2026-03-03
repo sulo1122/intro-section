@@ -1,0 +1,323 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+:root {
+  --white: hsl(0, 0%, 98%);
+  --gray: hsl(0, 0%, 41%);
+  --black: hsl(0, 0%, 8%);
+}
+
+body {
+  font-family: "Epilogue", sans-serif;
+  font-weight: 500;
+  font-size: 1.8rem;
+  line-height: 1.3;
+  color: var(--gray);
+
+  background-color: var(--white);
+
+  overflow-x: hidden;
+}
+
+h1 {
+  font-size: 6.4rem;
+  color: var(--black);
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: 2.6rem;
+}
+
+ul {
+  list-style: none;
+}
+
+.grid {
+  display: grid;
+}
+
+.grid--2cols {
+  grid-template-columns: 1fr 1fr;
+}
+
+.section {
+  max-width: 140rem;
+  padding: 2rem;
+  margin: 3.8rem auto 0 auto;
+  justify-items: center;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.btn {
+  background-color: inherit;
+  border: none;
+  font-family: inherit;
+  font-size: inherit;
+  cursor: pointer;
+  padding: 1.2rem 2.4rem;
+  border-radius: 14px;
+  transition: all 100ms;
+}
+
+/* SECTION */
+
+.col-text {
+  max-width: 43rem;
+  align-self: end;
+}
+
+.col-text p {
+  margin-bottom: 2.6rem;
+}
+
+.brands {
+  justify-content: space-between;
+}
+
+.btn--learn {
+  padding: 1.5rem 2.8rem;
+  margin-bottom: 6.8rem;
+  transition: all 150ms;
+
+  color: var(--white);
+  background-color: var(--black);
+  border: solid var(--black) 1px;
+}
+
+.btn--learn:hover {
+  color: var(--black);
+  background-color: var(--white);
+}
+
+.col-img {
+  max-width: 36rem;
+}
+
+.hero-img {
+  width: 100%;
+}
+
+/* HEADER */
+
+.header {
+  padding: 2.2rem 4.8rem;
+  gap: 5.8rem;
+  z-index: 999;
+}
+
+.nav {
+  font-size: 1.5rem;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav__list {
+  gap: 3.6rem;
+}
+
+.nav__list li {
+  cursor: pointer;
+}
+
+/* POPUP MENU */
+.menu--name {
+  align-self: start;
+  gap: 1.2rem;
+}
+
+.menu {
+  gap: 0.6rem;
+  position: relative;
+  z-index: 999;
+}
+
+.hidden .popMenu {
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.popMenu {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+
+  width: max-content;
+  position: absolute;
+  top: 35px;
+  background-color: var(--white);
+  padding: 1.8rem;
+  border-radius: 14px;
+  box-shadow: 0px 0px 34px -4px rgba(0, 0, 0, 0.17);
+}
+
+.popMenu li {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.features .popMenu {
+  right: 0px;
+}
+
+/* SIDE MENU */
+.side-menu-btn {
+  width: 70px;
+  height: 40px;
+  display: none;
+  z-index: 999;
+}
+
+/* NAV BUTTONS */
+.btn--login,
+.btn--register {
+  color: var(--gray);
+  margin-bottom: 0.2rem;
+}
+
+.btn--register {
+  border: solid var(--gray) 1px;
+}
+
+.btn--login:hover,
+.btn--register:hover,
+li:hover {
+  color: var(--black);
+  border-color: var(--black);
+  transition: all 150ms;
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width: 56.25em) {
+  html {
+    font-size: 54%;
+  }
+}
+
+@media (max-width: 47.5em) {
+  body {
+    line-height: 1.5;
+  }
+
+  h1 {
+    font-size: 5.2rem;
+  }
+
+  .section {
+    margin: 0;
+    padding: 0 0 8rem 0;
+    gap: 3.4rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+  }
+
+  .header {
+    height: 9.8rem;
+    padding: 2.2rem;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .nav__list {
+    align-items: start;
+  }
+
+  .btns--row {
+    align-self: center;
+    width: 100%;
+  }
+
+  .nav__list,
+  .btns--row {
+    flex-direction: column;
+  }
+
+  .col-text {
+    max-width: 90%;
+    text-align: center;
+  }
+
+  .btn--register {
+    width: 100%;
+    max-width: 30rem;
+  }
+
+  .col-img {
+    order: -1;
+    max-width: 48rem;
+    max-height: 100%;
+  }
+
+  .brands img {
+    transform: scale(90%);
+  }
+
+  .nav {
+    /* CLOSE BY DEFAULT */
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 65%;
+    height: 100vh;
+    padding: 12rem 3.6rem 3.6rem 3.6rem;
+
+    box-shadow: 0 0 0 10000px rgba(0, 0, 0, 0.5);
+
+    flex-direction: column;
+    align-items: start;
+    justify-content: unset;
+    background-color: #fff;
+
+    transform: translateX(100%);
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+    z-index: 1;
+    transition: all 0.3s ease-in;
+  }
+
+  .side-open .nav {
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+    transform: translateX(0);
+  }
+
+  .menu {
+    position: unset;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .popMenu {
+    gap: 0.6rem;
+    position: initial;
+    background-color: #fff;
+    padding: 1.8rem;
+    border-radius: 14px;
+    box-shadow: none;
+    gap: 1.6rem;
+  }
+
+  .hidden .popMenu {
+    display: none;
+  }
+
+  .side-menu-btn {
+    display: block;
+  }
+}
