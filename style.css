@@ -71,7 +71,7 @@ ul {
   transition: all 100ms;
 }
 
-/* SECTION */
+
 
 .col-text {
   max-width: 43rem;
@@ -109,7 +109,7 @@ ul {
   width: 100%;
 }
 
-/* HEADER */
+
 
 .header {
   padding: 2.2rem 4.8rem;
@@ -132,7 +132,7 @@ ul {
   cursor: pointer;
 }
 
-/* POPUP MENU */
+
 .menu--name {
   align-self: start;
   gap: 1.2rem;
@@ -173,7 +173,7 @@ ul {
   right: 0px;
 }
 
-/* SIDE MENU */
+
 .side-menu-btn {
   width: 70px;
   height: 40px;
@@ -181,7 +181,7 @@ ul {
   z-index: 999;
 }
 
-/* NAV BUTTONS */
+
 .btn--login,
 .btn--register {
   color: var(--gray);
@@ -200,7 +200,7 @@ li:hover {
   transition: all 150ms;
 }
 
-/* MEDIA QUERIES */
+
 
 @media (max-width: 56.25em) {
   html {
@@ -267,7 +267,7 @@ li:hover {
   }
 
   .nav {
-    /* CLOSE BY DEFAULT */
+    
     position: fixed;
     top: 0;
     right: 0;
