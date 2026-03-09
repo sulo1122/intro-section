@@ -64,17 +64,22 @@ widthMatch.addEventListener("change", function (mm) {
   }
 });
 
-sideMenuBtn.addEventListener("click", function (e) {
-  e.target.closest(".header").classList.toggle("side-open");
-  const rect = sideMenuBtn.getBoundingClientRect();
-  console.log(rect.top, rect.right, rect.bottom, rect.left);
-  const imgBtn = sideMenuBtn.querySelector("img");
 
-  imgBtn.src =
-    imgBtn.src === sideMenuBtn.dataset.open
-      ? sideMenuBtn.dataset.close
-      : sideMenuBtn.dataset.open;
-  sideMenuBtn.classList.toggle("fixed");
+const menuIcon = document.querySelector(".menu-icon");
+const closeIcon = document.querySelector(".close-icon");
+
+sideMenuBtn.addEventListener("click", function () {
+
+  document.querySelector(".header").classList.toggle("side-open");
+
+  if (document.querySelector(".header").classList.contains("side-open")) {
+    menuIcon.style.display = "none";
+    closeIcon.style.display = "block";
+  } else {
+    menuIcon.style.display = "block";
+    closeIcon.style.display = "none";
+  }
+
 });
 
 
@@ -84,3 +89,5 @@ if (window.innerWidth <= 760) {
   navList.addEventListener("mouseover", mouseOverHandler);
   navList.addEventListener("mouseleave", mouseLeaveHandler);
 }
+
+

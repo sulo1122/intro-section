@@ -108,6 +108,9 @@ ul {
 .hero-img {
   width: 100%;
 }
+.close-icon{
+  display:none;
+}
 
 
 
@@ -320,4 +323,4 @@ li:hover {
   .side-menu-btn {
     display: block;
   }
-}
+} 
